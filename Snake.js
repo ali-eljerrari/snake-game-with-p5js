@@ -54,9 +54,7 @@ class Snake{
      if(d < 1){
        this.total = 0
        this.tail=[]
-     }
-     
-     
+   }     
   }
  }
 }
