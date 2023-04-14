@@ -21,12 +21,20 @@ function pickLocation(){
 
 function draw() {
   background(0)
-  snake.update()
-  snake.show()
-  if(snake.eat(food)){
+  
+    if(snake.eat(food)){
     pickLocation()
   }
-  ellipse(food.x, food.y, scale, scale)
+  
+  snake.death()
+  snake.update()
+  snake.show()
+
+  rect(food.x, food.y, scale, scale)
+}
+
+function mousePressed(){
+    snake.total++
 }
 
 
